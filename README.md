@@ -399,12 +399,14 @@ In this challenge a casino has asked you to make an online dice that works just 
 
 <details><summary><b>Solutions</b></summary>
 <p>
-    
+
+-   HTML
 ```html
 <div class="dice"></div>
 <button class="btn-roll">Roll the dice</button>
 ```
 
+-   JS
 ```js
 // Create base dice
 for (let i = 0; i < 9; i++) {
@@ -445,7 +447,7 @@ function showNumber(num) {
 </p>
 </details>
 
-[Source Code](./tree/main/Day%208%20-%20The%20Rolling%20Dice)
+[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%208%20-%20The%20Rolling%20Dice)
 
 [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%208%20-%20The%20Rolling%20Dice/)
 
