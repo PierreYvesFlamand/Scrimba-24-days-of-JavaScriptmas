@@ -19,6 +19,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 [Day 6: Sort By Length](#day-6-sort-by-length)
 
+[Day 7: Count Vowel Consonant](#day-7-count-vowel-consonant)
+
 </p>
 </details>
 
@@ -315,5 +317,64 @@ function sortByLength(strs) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/co8a744d2a87d8bd7905ca4ea)
+
+---
+
+## Day 7: Count Vowel Consonant
+
+You are given a string s that consists of only lowercase English letters. If vowels ('a', 'e', 'i', 'o' and 'u') are given a value of 1 consonants are given a value of 2, return the sum of all the letters in the input string.
+
+### Example
+
+-   For s = "abcde", the output should be countVowelConsonant(s) = 8
+
+### Hints
+
+-   split()
+-   reduce()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function countVowelConsonant(str) {
+    const vowelsMap = ['a', 'e', 'i', 'o', 'u'];
+    const allLetters = str.split('');
+    const allLettersLength = allLetters.length;
+    let i, total = 0;
+  
+    for(i = 0; i < allLettersLength; i++){
+        if(vowelsMap.includes(allLetters[i])){
+            total += 1;
+        }else {
+            total += 2;
+        }
+    }
+  
+    return total;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function countVowelConsonant(str) {
+    const vowelsMap = ['a', 'e', 'i', 'o', 'u'];
+    return str.split('').reduce((acc, letter) => {
+        if (vowelsMap.includes(letter)) {
+            return acc + 1;
+        }
+        return acc + 2;
+    }, 0);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co3e5411f93ddf1ce131435df)
 
 ---
