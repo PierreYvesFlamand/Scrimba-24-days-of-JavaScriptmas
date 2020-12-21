@@ -578,7 +578,50 @@ function adjacentElementsProduct(nums) {
 </p>
 </details>
 
-[Link to my scrimb]()
+[Link to my scrimb](https://scrimba.com/scrim/co5d34cf6a0357df59ebd4851)
+
+---
+
+</p>
+</details>
+
+<details><summary><b>Day 11: Avoid Obstacles</b></summary>
+<p>
+
+You are given an array of integers representing coordinates of obstacles situated on a straight line.
+
+Assume that you are jumping from the point with coordinate 0 to the right. you are allowed only to make jumps of tha same length represented by some integer.
+
+Find the minimal length of the jump enough to avoid all the obstacle.
+
+### Example
+
+-   For inputArray = [5, 3, 6, 7, 9], the output should be avoidObstacles(inputArray) = 4
+
+### Hints
+
+-   sort()
+-   every()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function avoidObstacles(nums) {
+    nums.sort((a, b) => a-b);
+    const max = nums[nums.length - 1];
+    
+    for (let i = 1; i <= max + 1; i++) {
+        if(nums.every((num) => num % i !== 0)) {
+            return i;
+        } 
+    }
+}
+```
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co0714563a66027c7ea0d3caf)
 
 ---
 
