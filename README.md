@@ -1027,3 +1027,68 @@ function differentSymbolsNaive(str) {
 
 </p>
 </details>
+
+<details><summary><b>Day 18: Array Previous Less</b></summary>
+<p>
+
+Given an array of integers, for each position i, search among the previous positions for the last (from the left) position that contains a smaller value. Store that value at position i in the answer. If no such value can be found, store -1 instead.
+
+### Example
+
+-   For items = [3, 5, 2, 4, 5], the output should be [-1, 3, -1, 2, 4]
+
+### Hints
+
+-   unshift()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function arrayPreviousLess(nums) {
+    const arr = [-1];
+    
+    for(let i = 1; i < nums.length; i++){
+        for(let j = i; j >= 0; j--){
+            if(nums[j] < nums[i]){
+                arr.push(nums[j]);
+                break;
+            }else if(j === 0){
+                arr.push(-1)
+            }
+        }
+    }
+    
+    return arr;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function arrayPreviousLess(nums) {
+    return nums.reduce((acc, num, idx) => {
+        for (let i = idx; i >= 0; i--) {
+            if (nums[i] < num) {
+                acc.push(nums[i]);
+                return acc;
+            }
+        }
+        acc.push(-1);
+        return acc;
+    }, []);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/cocc64d258f47740e4aa0eacf)
+
+---
+
+</p>
+</details>
