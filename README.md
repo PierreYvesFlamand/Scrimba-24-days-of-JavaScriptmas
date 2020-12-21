@@ -451,7 +451,7 @@ function showNumber(num) {
 
 [Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%2008%20-%20The%20Rolling%20Dice)
 
-[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2008%20-%20The%20Rolling%20Dice/)
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%208%20-%20The%20Rolling%20Dice/)
 
 [Link to my scrimb](https://scrimba.com/scrim/co153455a86de634e8de97b58)
 
