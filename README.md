@@ -62,7 +62,7 @@ function candies(children, candy) {
 </p>
 </details>
 
-[Link to my scrimb](https://scrimba.com/scrim/co6e242088c674c5acde61c54)
+<a href="https://scrimba.com/scrim/co6e242088c674c5acde61c54" target="_blank">Link to my scrimb</a>
 
 ---
 
