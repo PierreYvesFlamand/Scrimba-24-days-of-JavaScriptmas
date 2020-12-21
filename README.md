@@ -1221,3 +1221,53 @@ function domainType(domains) {
 
 </p>
 </details>
+
+<details><summary><b>🦃 Day 21: Sum of 2</b></summary>
+<p>
+
+You have two integer arrays, a and b, and an integer target value v. Determine whether there is a pair of numbers, where one number is taken from a and the other from b, that can be added together to get a sum of v. Return true if such a exists, otherwise return false.
+
+### Example
+
+-   For a = [1, 2, 3], b = [10, 20, 30, 40] and v = 42, the output should be sumOfTwo(a, b, v) = true
+
+### Hints
+
+-   includes()
+-   hasOwnProperty()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function sumOfTwo(nums1, nums2, value) {
+    for(let i = 0; i < nums1.length; i++){
+        if(nums2.includes(value - nums1[i])){
+            return true;
+        }    
+    }
+    
+    return false;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function sumOfTwo(nums1, nums2, value) {
+    return nums1.some((num) => nums2.includes(value - num));
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/coeb34c428bc70b910d1f226b)
+
+---
+
+</p>
+</details>
