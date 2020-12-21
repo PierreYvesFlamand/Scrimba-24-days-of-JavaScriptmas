@@ -708,3 +708,60 @@ function extractEachKth(nums, index) {
 
 </p>
 </details>
+
+<details><summary><b>Day 14: Maximal Adjacent Difference</b></summary>
+<p>
+
+Given an array of integers, find the maximal absolute difference between any two of its adjacent elements.
+
+### Example
+
+-   For inputArray = [2, 4, 1, 0], the output should be arrayMaximalAdjacentDifference(inputArray) = 3
+-   For inputArray = [2, 9, 1, 0], the output should be arrayMaximalAdjacentDifference(inputArray) = 8
+
+### Hints
+
+-   Math.abs()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function arrayMaximalAdjacentDifference(nums) {
+    let maxDif = 0;
+    
+    for(let i = 0; i < nums.length - 1; i++) {
+        const dif = Math.abs(nums[i] - nums[i + 1]);
+        
+        if(maxDif < dif) {
+            maxDif = dif;
+        }
+    }
+    
+    return maxDif;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function arrayMaximalAdjacentDifference(nums) {
+    return nums.reduce((acc, num, i) => {
+        const dif = Math.abs(num - nums[i + 1]);
+        return dif > acc ? dif : acc;
+    }, 0);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co5804da49fa0514df4235620)
+
+---
+
+</p>
+</details>
