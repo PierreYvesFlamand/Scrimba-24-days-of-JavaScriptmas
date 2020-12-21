@@ -32,7 +32,7 @@ function candies(children, candy) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
     
 ```js
@@ -126,7 +126,7 @@ Write a function that splits an array (first argument) into groups the length of
 
 -   slice()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -185,7 +185,7 @@ Given a year, return the century it is in. The first century spans from the year
 
 -   Math.floor()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -202,7 +202,7 @@ function centuryFromYear(year) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -241,7 +241,7 @@ Your result must be a string.
 -   split()
 -   reverse()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -259,7 +259,7 @@ function reverseAString(str) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -292,7 +292,7 @@ Givenan array of strings, sort them in the order of increasing lengths. If two s
 
 -   sort()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -305,7 +305,7 @@ function sortByLength(strs) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -338,7 +338,7 @@ You are given a string s that consists of only lowercase English letters. If vow
 -   split()
 -   reduce()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -362,7 +362,7 @@ function countVowelConsonant(str) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -397,7 +397,7 @@ In this challenge a casino has asked you to make an online dice that works just 
 -   event listeners
 -   Math.random()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
 
 -   HTML
@@ -477,7 +477,7 @@ For exemple, sumFibs(10) should return 10 because all odd Fibonacci numbers less
 -   sumOddFibonacciNums(1000) should return 1785
 -   sumOddFibonacciNums(4000000) should return 4613732
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -502,7 +502,7 @@ function sumOddFibonacciNumbers(num) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -543,7 +543,7 @@ Given an array of integers, find the pair od adjacent elements that has the larg
 
 ### Hints
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -564,7 +564,7 @@ function adjacentElementsProduct(nums) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -603,7 +603,7 @@ Find the minimal length of the jump enough to avoid all the obstacle.
 -   sort()
 -   every()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -641,7 +641,7 @@ Check if the given string is a correct time representation of the 24-hour clock
 
 ### Hints
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -658,7 +658,7 @@ function validTime(str) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -691,7 +691,7 @@ Given array of integers, remove each kth element from it.
 
 -   filter()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -723,7 +723,7 @@ Given an array of integers, find the maximal absolute difference between any two
 
 -   Math.abs()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -744,7 +744,7 @@ function arrayMaximalAdjacentDifference(nums) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -777,7 +777,7 @@ Create a very simple Html/Css/Js carousel.
 
 ### Hints
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 -   HTML
@@ -933,7 +933,7 @@ Transform a given sentence into a new one with dashes between each two consecuti
 -   join()
 -   split()
 
-<details><summary><b>Solutions</b></summary>
+<details><summary><b>Solution</b></summary>
 <p>
     
 ```js
@@ -951,7 +951,7 @@ function insertDashes(str) {
 </p>
 </details>
 
-<details><summary><b>Compacted solution</b></summary>
+<details><summary><b>Compact solution</b></summary>
 <p>
 
 ```js
@@ -967,6 +967,61 @@ function insertDashes(str) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/cod1b4555932157128533db67)
+
+---
+
+</p>
+</details>
+
+<details><summary><b>Day 17: Different symbols naive</b></summary>
+<p>
+
+Given a string, find the number of different characters in it.
+
+### Example
+
+-   For s = "cabca", the output should be 3
+    -   There are 3 different characters: a, b and c.
+
+### Hints
+
+-   includes()
+-   split()
+-   push()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function differentSymbolsNaive(str) {
+    const unniqueLetters = [];
+    const letters = str.split('');
+    
+    letters.forEach((letter) => {
+        if(!unniqueLetters.includes(letter)) {
+            unniqueLetters.push(letter);
+        } 
+    });
+    
+    return unniqueLetters.length;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function differentSymbolsNaive(str) {
+    return new Set(str.split('')).size;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co5b3491bb5692fb22fc70749)
 
 ---
 
