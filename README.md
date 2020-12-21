@@ -6,7 +6,7 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 ---
 
-<details><summary><b>Day 1: Candies</b></summary>
+<details><summary><b>🍬 Day 1: Candies</b></summary>
 <p>
 
 n children have got m pieces of candy. They want to eat as much candy as they can, but each child must eat exactly the same amout of candy as any other child. Determine how many pieces of candy will be eaten by all the children together. In dividual pieces of candy cannot be split.
@@ -50,7 +50,7 @@ function candies(children, candy) {
 </p>
 </details>
 
-<details><summary><b>Day 2: Deposit Profit</b></summary>
+<details><summary><b>⭐ Day 2: Deposit Profit</b></summary>
 <p>
 
 You have deposited a specific amout of dollars into your bank account. Each year your balance increases at the same growth rate. Find out how long it would take for your balance to pass a specific threshold with the assumption that you don't make any additional deposits.
@@ -112,7 +112,7 @@ function depositProfit(deposit, rate, threshold) {
 </p>
 </details>
 
-<details><summary><b>Day 3: Chunky Monkey</b></summary>
+<details><summary><b>👼 Day 3: Chunky Monkey</b></summary>
 <p>
 
 Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as two-dimensional array.
@@ -171,7 +171,7 @@ function chunkyMonkey(values, size) {
 </p>
 </details>
 
-<details><summary><b>Day 4: Century From Year</b></summary>
+<details><summary><b>🎄 Day 4: Century From Year</b></summary>
 <p>
 
 Given a year, return the century it is in. The first century spans from the year 1 up to and including the year 100, the second - from the year 101 up to and including the years 200, etc.
@@ -221,7 +221,7 @@ function centuryFromYear(year) {
 </p>
 </details>
 
-<details><summary><b>Day 5: Reverse A String</b></summary>
+<details><summary><b>🐑 Day 5: Reverse A String</b></summary>
 <p>
 
 Reverse the provided string.
@@ -278,7 +278,7 @@ function reverseAString(str) {
 </p>
 </details>
 
-<details><summary><b>Day 6: Sort By Length</b></summary>
+<details><summary><b>🤶 Day 6: Sort By Length</b></summary>
 <p>
 
 Givenan array of strings, sort them in the order of increasing lengths. If two strings have the same length, their relative order must be the same as in the initial array.
@@ -324,7 +324,7 @@ function sortByLength(strs) {
 </p>
 </details>
 
-<details><summary><b>Day 7: Count Vowel Consonant</b></summary>
+<details><summary><b>🦌 Day 7: Count Vowel Consonant</b></summary>
 <p>
 
 You are given a string s that consists of only lowercase English letters. If vowels ('a', 'e', 'i', 'o' and 'u') are given a value of 1 consonants are given a value of 2, return the sum of all the letters in the input string.
@@ -387,7 +387,7 @@ function countVowelConsonant(str) {
 </p>
 </details>
 
-<details><summary><b>Day 8: The Rolling Dice</b></summary>
+<details><summary><b>🔔 Day 8: The Rolling Dice</b></summary>
 <p>
 
 In this challenge a casino has asked you to make an online dice that works just like it wold in real life. Using the pre-made dice face that represents ‘one’, make the faces for ‘two’, ‘three’, ‘four’, ‘five’ and ‘six’. Now when the users clicks the dice on the screen the dice is expected to show one of the faces randomly.
@@ -460,7 +460,7 @@ function showNumber(num) {
 </p>
 </details>
 
-<details><summary><b>Day 9: Sum Odd Fibonacci Numbers</b></summary>
+<details><summary><b>🎺 Day 9: Sum Odd Fibonacci Numbers</b></summary>
 <p>
 
 Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
@@ -531,7 +531,7 @@ function sumOddFibonacciNumbers(num) {
 </p>
 </details>
 
-<details><summary><b>Day 10: Adjacent Elements Products</b></summary>
+<details><summary><b>💂‍♀️ Day 10: Adjacent Elements Products</b></summary>
 <p>
 
 Given an array of integers, find the pair od adjacent elements that has the largest product and return that product.
@@ -585,7 +585,7 @@ function adjacentElementsProduct(nums) {
 </p>
 </details>
 
-<details><summary><b>Day 11: Avoid Obstacles</b></summary>
+<details><summary><b>🎁 Day 11: Avoid Obstacles</b></summary>
 <p>
 
 You are given an array of integers representing coordinates of obstacles situated on a straight line.
@@ -628,7 +628,7 @@ function avoidObstacles(nums) {
 </p>
 </details>
 
-<details><summary><b>Day 12: Valid Time</b></summary>
+<details><summary><b>❄ Day 12: Valid Time</b></summary>
 <p>
 
 Check if the given string is a correct time representation of the 24-hour clock
@@ -678,7 +678,7 @@ function validTime(str) {
 </p>
 </details>
 
-<details><summary><b>Day 13: Extract Each Kth</b></summary>
+<details><summary><b>🤴 Day 13: Extract Each Kth</b></summary>
 <p>
 
 Given array of integers, remove each kth element from it.
@@ -709,7 +709,7 @@ function extractEachKth(nums, index) {
 </p>
 </details>
 
-<details><summary><b>Day 14: Maximal Adjacent Difference</b></summary>
+<details><summary><b>🧸 Day 14: Maximal Adjacent Difference</b></summary>
 <p>
 
 Given an array of integers, find the maximal absolute difference between any two of its adjacent elements.
@@ -766,7 +766,7 @@ function arrayMaximalAdjacentDifference(nums) {
 </p>
 </details>
 
-<details><summary><b>Day 15: Carousel</b></summary>
+<details><summary><b>🕊 Day 15: Carousel</b></summary>
 <p>
 
 Create a very simple Html/Css/Js carousel.
@@ -919,7 +919,7 @@ updateBtn(currentSlide);
 </p>
 </details>
 
-<details><summary><b>Day 16: Insert Dashes</b></summary>
+<details><summary><b>🧦 Day 16: Insert Dashes</b></summary>
 <p>
 
 Transform a given sentence into a new one with dashes between each two consecutive letters
@@ -973,7 +973,7 @@ function insertDashes(str) {
 </p>
 </details>
 
-<details><summary><b>Day 17: Different symbols naive</b></summary>
+<details><summary><b>👑 Day 17: Different symbols naive</b></summary>
 <p>
 
 Given a string, find the number of different characters in it.
@@ -1028,7 +1028,7 @@ function differentSymbolsNaive(str) {
 </p>
 </details>
 
-<details><summary><b>Day 18: Array Previous Less</b></summary>
+<details><summary><b>🎅 Day 18: Array Previous Less</b></summary>
 <p>
 
 Given an array of integers, for each position i, search among the previous positions for the last (from the left) position that contains a smaller value. Store that value at position i in the answer. If no such value can be found, store -1 instead.
@@ -1093,7 +1093,7 @@ function arrayPreviousLess(nums) {
 </p>
 </details>
 
-<details><summary><b>Day 19: Alphabet Subsequence</b></summary>
+<details><summary><b>🐫 Day 19: Alphabet Subsequence</b></summary>
 <p>
 
 Check whether the given string is a subsequence of the plaintext alphabet.
