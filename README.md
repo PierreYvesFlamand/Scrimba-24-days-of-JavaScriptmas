@@ -530,3 +530,57 @@ function sumOddFibonacciNumbers(num) {
 
 </p>
 </details>
+
+<details><summary><b>Day 10: Adjacent Elements Products</b></summary>
+<p>
+
+Given an array of integers, find the pair od adjacent elements that has the largest product and return that product.
+
+### Example
+
+-   For inputArray = [3, 6, -2, -5, 7, 3], the output should be adjacentElementsProduct(inputArray) = 21
+    -   7 and 3 produce the largest product
+
+### Hints
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function adjacentElementsProduct(nums) {
+    let max = nums[0] * nums[1];
+    let product;
+    
+    for(let i = 1; i < nums.length - 1; i++) {
+        product = nums[i] * nums[i + 1];
+        if(product > max) {
+            max = product;
+        }
+    }
+    
+    return max;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function adjacentElementsProduct(nums) {
+    return nums.reduce((acc, cur, idx) => {
+        return cur * nums[idx + 1] > acc ? cur * nums[idx + 1] : acc;
+    }, nums[0] * nums[1]);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb]()
+
+---
+
+</p>
+</details>
