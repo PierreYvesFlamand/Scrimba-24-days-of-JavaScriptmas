@@ -6,9 +6,9 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 <details><summary><b>Table of contents</b></summary>
 <p>
    
-[Day 1: Candies](./#day-1-candies)
+[Day 1: Candies](#day-1-candies)
 
-[Day 2: Deposit Profit](./#day-2-deposit-profit)
+[Day 2: Deposit Profit](#day-2-deposit-profit)
 
 </p>
 </details>
