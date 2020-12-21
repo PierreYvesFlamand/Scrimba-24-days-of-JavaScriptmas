@@ -1,4 +1,5 @@
 # Scrimba-24-days-of-JavaScriptmas
+
 The [JavaScriptmas](https://scrimba.com/learn/adventcalendar) is a twenty-four-day coding course created by [Scrimba](https://scrimba.com/).
 
 From the 1st of December 2020 to 24th of december, here are my solutions.
@@ -9,6 +10,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 [Day 1: Candies](#day-1-candies)
 
 [Day 2: Deposit Profit](#day-2-deposit-profit)
+
+[Day 3: Chunky Monkey](#day-3-chunky-monkey)
 
 </p>
 </details>
@@ -21,12 +24,12 @@ n children have got m pieces of candy. They want to eat as much candy as they ca
 
 ### Example
 
-* For n = 3 and m = 10, the output should be candies(n, m) = 9.
-    * Each child will eat 3 pieces. So the answer is 9.
+-   For n = 3 and m = 10, the output should be candies(n, m) = 9.
+    -   Each child will eat 3 pieces. So the answer is 9.
 
 ### Hints
 
-* Math.floor()
+-   Math.floor()
 
 <details><summary><b>Solution</b></summary>
 <p>
@@ -65,10 +68,10 @@ For deposit = 100, rate = 20 and threshold = 170, the output should be depositPr
 
 Each year the amout of money on your account increases by 20%. It means that throughout the years your balance would be:
 
-* year 0: 100
-* year 1: 120
-* year 2: 144
-* year 3: 172,8
+-   year 0: 100
+-   year 1: 120
+-   year 2: 144
+-   year 3: 172,8
 
 Thus, it will take 3 years for your balance to pass the threshold, which is the answer.
 
@@ -110,3 +113,58 @@ function depositProfit(deposit, rate, threshold) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/co1e64fc4a0703c7b1ea75334)
+
+---
+
+## Day 3: Chunky Monkey
+
+Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as two-dimensional array.
+
+### Example
+
+-   chunkyMonkey(["a", "b", "c", "d"], 2) should return [["a", "b"], ["c", "d"]]
+-   chunkyMonkey([0, 1, 2, 3, 4, 5], 4) should return [[0, 1, 2, 3], [4, 5]]
+
+### Hints
+
+-   slice()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function chunkyMonkey(values, size) {
+    const arr = [];
+    let sliceArr = [];
+    let pos = 0;
+    
+    while(pos < values.length) {
+        sliceArr = values.slice(pos, pos += size);
+        arr.push(sliceArr);
+    }
+    
+    return arr;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Faster solution</b></summary>
+<p>
+
+```js
+function chunkyMonkey(values, size) {
+    const arr = [];
+
+    while (values.length > 0) {
+        arr.push(values.splice(0, size));
+    }
+
+    return arr;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co2f64c098138c3849d63ea72)
