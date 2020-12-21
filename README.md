@@ -17,6 +17,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 [Day 5: Reverse A String](#day-5-reverse-a-string)
 
+[Day 6: Sort By Length](#day-6-sort-by-length)
+
 </p>
 </details>
 
@@ -271,5 +273,47 @@ function reverseAString(str) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/cof4e4834a05c77e1479b7208)
+
+---
+
+## Day 6: Sort By Length
+
+Givenan array of strings, sort them in the order of increasing lengths. If two strings have the same length, their relative order must be the same as in the initial array.
+
+### Example
+
+-   For inputArray = ["abc", "", "aaa", "a", "zz"]
+    -   Output should be sortByLength(inputArray) = ["", "a", "zz", "abc", "aaa"]
+
+### Hints
+
+-   sort()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function sortByLength(strs) {
+    return strs.sort((function(curStr, nextStr) {
+        return curStr.length - nextStr.length;
+    }));
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function sortByLength(strs) {
+    return strs.sort((curStr, nextStr) => curStr.length - nextStr.length);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co8a744d2a87d8bd7905ca4ea)
 
 ---
