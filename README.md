@@ -15,6 +15,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 [Day 4: Century From Year](#day-4-century-from-year)
 
+[Day 5: Reverse A String](#day-5-reverse-a-string)
+
 </p>
 </details>
 
@@ -216,5 +218,58 @@ function centuryFromYear(year) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/co05b4019a66e115abb574b6d)
+
+---
+
+## Day 5: Reverse A String
+
+Reverse the provided string.
+
+You may need to turn the string into an array before you can reverse it.
+
+Your result must be a string.
+
+### Example
+
+-   reverseAString("hello") returns "olleh";
+-   reverseAString("Howdy") returns "ydwoH";
+
+### Hints
+
+-   join()
+-   split()
+-   reverse()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function reverseAString(str) {
+    let reverse = '';
+    let i;
+    
+    for(i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    
+    return reverse;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function reverseAString(str) {
+    return str.split('').reverse().join('');
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/cof4e4834a05c77e1479b7208)
 
 ---
