@@ -671,7 +671,38 @@ function validTime(str) {
 </p>
 </details>
 
-[Link to my scrimb]()
+[Link to my scrimb](https://scrimba.com/scrim/co2e8427fa9875fb4642cb5ca)
+
+---
+
+</p>
+</details>
+
+<details><summary><b>Day 13: Extract Each Kth</b></summary>
+<p>
+
+Given array of integers, remove each kth element from it.
+
+### Example
+
+-   From inputArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] and k = 3, the output should be extractEachKth(inputArray, k) = [1, 2, 4, 5, 7, 8, 10]
+
+### Hints
+
+-   filter()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function extractEachKth(nums, index) {
+    return nums.filter(num => num % index !== 0)
+}
+```
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co6c8432ea053759af3d62b86)
 
 ---
 
