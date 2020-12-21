@@ -449,9 +449,9 @@ function showNumber(num) {
 </p>
 </details>
 
-[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%208%20-%20The%20Rolling%20Dice)
+[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%2008%20-%20The%20Rolling%20Dice)
 
-[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%208%20-%20The%20Rolling%20Dice/)
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2008%20-%20The%20Rolling%20Dice/)
 
 [Link to my scrimb](https://scrimba.com/scrim/co153455a86de634e8de97b58)
 
@@ -773,7 +773,7 @@ Create a very simple Html/Css/Js carousel.
 
 ### Example
 
--   [Demo]()
+-   [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2015%20-%20Carousel)
 
 ### Hints
 
@@ -913,6 +913,60 @@ updateBtn(currentSlide);
 [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2015%20-%20Carousel)
 
 [Link to my scrimb](https://scrimba.com/scrim/coe3a4979bf890f8dae8708e5)
+
+---
+
+</p>
+</details>
+
+<details><summary><b>Day 16: Insert Dashes</b></summary>
+<p>
+
+Transform a given sentence into a new one with dashes between each two consecutive letters
+
+### Example
+
+-   For input = "aba caba", the output shoul be "a-b-a c-a-b-a"
+
+### Hints
+
+-   join()
+-   split()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function insertDashes(str) {
+    const allWords = str.split(' ');
+    const allWordsDashed = allWords.map((word) => {
+       const letters = word.split('');
+       
+       return letters.join('-'); 
+    });
+    
+    return allWordsDashed.join(' ');
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function insertDashes(str) {
+    return str
+        .split(' ')
+        .map((word) => word.split('').join('-'))
+        .join(' ');
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/cod1b4555932157128533db67)
 
 ---
 
