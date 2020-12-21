@@ -401,12 +401,14 @@ In this challenge a casino has asked you to make an online dice that works just 
 <p>
 
 -   HTML
+
 ```html
 <div class="dice"></div>
 <button class="btn-roll">Roll the dice</button>
 ```
 
 -   JS
+
 ```js
 // Create base dice
 for (let i = 0; i < 9; i++) {
@@ -452,6 +454,77 @@ function showNumber(num) {
 [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%208%20-%20The%20Rolling%20Dice/)
 
 [Link to my scrimb](https://scrimba.com/scrim/co153455a86de634e8de97b58)
+
+---
+
+</p>
+</details>
+
+<details><summary><b>Day 9: Sum Odd Fibonacci Numbers</b></summary>
+<p>
+
+Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+
+The first two numbers in the Fibonacci sequence are 1 and 1. Every additional number in the sequence is the sum of the two previous numbers.
+
+The first six numbers of the Fibonacci sequence are 1, 1, 2, 3, 5 and 8.
+
+For exemple, sumFibs(10) should return 10 because all odd Fibonacci numbers less than or equal to 10 are 1, 1, 3 and 5.
+
+### Example
+
+-   sumOddFibonacciNums(10) should return 10
+-   sumOddFibonacciNums(1000) should return 1785
+-   sumOddFibonacciNums(4000000) should return 4613732
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function sumOddFibonacciNumbers(num) {
+    let total = 0;
+    let prev = 0;
+    let cur = 1;
+    
+    while(cur <= num) {
+        if(cur % 2 === 1) {
+            total += cur;
+        }
+        
+        const next = cur + prev;
+        prev = cur;
+        cur = next;
+    }
+    
+    return total;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function sumOddFibonacciNumbers(num) {
+    let total = 0;
+    let [prev, cur] = [0, 1];
+
+    while (cur <= num) {
+        if (cur % 2 === 1) {
+            total += cur;
+        }
+        [prev, cur] = [cur, cur + prev];
+    }
+
+    return total;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co49b451a839914d44ceba461)
 
 ---
 
