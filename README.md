@@ -627,3 +627,53 @@ function avoidObstacles(nums) {
 
 </p>
 </details>
+
+<details><summary><b>Day 12: Valid Time</b></summary>
+<p>
+
+Check if the given string is a correct time representation of the 24-hour clock
+
+### Example
+
+-   For time = "13:58", the output should be validTime(time) = true;
+-   For time = "25:51", the output should be validTime(time) = false;
+-   For time = "02:76", the output should be validTime(time) = false;
+
+### Hints
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function validTime(str) {
+    const hours = str.split(':')[0];
+    const minutes = str.split(':')[1];
+    
+    if(parseInt(hours) > 23 || parseInt(hours) < 0 || parseInt(minutes) > 59 || parseInt(minutes) < 0) {
+        return false;
+    }
+    return true;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function validTime(str) {
+    const [h, min] = str.split(':');
+    return parseInt(h) >= 0 && parseInt(h) <= 24 && parseInt(min) >= 0 && parseInt(min) <= 60;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb]()
+
+---
+
+</p>
+</details>
