@@ -1156,3 +1156,68 @@ function alphabetSubsequence(str) {
 
 </p>
 </details>
+
+<details><summary><b>✨ Day 20: </b></summary>
+<p>
+
+GoDaddy makes a lot of different top-level domains to its customers. A top-level domain is on that goes directly after the last dot(".") in the domain name, for example .com in example.com. To help the users choose from available domains, GoDaddy is introducing a new feature that shows the type of the chosen top-level domain. You have to implement this feature. To begin with, you want to write a function that labels the domains as "commercial", "organization", "network" or "information" for .com, .org, .net or .info respectively. For the given list of domains return the list of their labels.
+
+### Example
+
+-   For domains = ["en.wiki.org", "codefights.com", "happy.net", "code.info"], the output should be domainType(domains) = ["organization", "commercial", "network", "information"]
+
+### Hints
+
+-   split()
+-   push()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function domainType(domains) {
+    const domainMap = {
+        com: "commercial",
+        org: "organization",
+        net: "network",
+        info: "information",
+    }
+    
+    const arr = [];
+    
+    domains.map(domain => {
+        const extension = domain.split('.').pop();
+        arr.push(domainMap[extension])
+    })
+    
+    return arr;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function domainType(domains) {
+    const domainMap = {
+        com: 'commercial',
+        org: 'organization',
+        net: 'network',
+        info: 'information',
+    };
+
+    return domains.map((domain) => domainMap[domain.split('.').pop()]);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co1ca4938a0344fe3d72f90e3)
+
+---
+
+</p>
+</details>
