@@ -13,6 +13,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 [Day 3: Chunky Monkey](#day-3-chunky-monkey)
 
+[Day 4: Century From Year](#day-4-century-from-year)
+
 </p>
 </details>
 
@@ -168,3 +170,51 @@ function chunkyMonkey(values, size) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/co2f64c098138c3849d63ea72)
+
+---
+
+## Day 4: Century From Year
+
+Given a year, return the century it is in. The first century spans from the year 1 up to and including the year 100, the second - from the year 101 up to and including the years 200, etc.
+
+### Example
+
+-   For year = 1905, the output should be centuryFromYear(year) = 20;
+-   For year = 1700, the output should be centuryFromYear(year) = 17;
+
+### Hints
+
+-   Math.floor()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```js
+function centuryFromYear(year) {
+    const century = year / 100;
+    
+    if(year % 100 === 0) {
+        return century;
+    }else {
+        return Math.floor(century) + 1;
+    }
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compacted solution</b></summary>
+<p>
+
+```js
+function centuryFromYear(year) {
+    return Math.floor((year - 1) / 100) + 1;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co05b4019a66e115abb574b6d)
+
+---
