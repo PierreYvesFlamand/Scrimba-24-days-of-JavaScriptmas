@@ -1,4 +1,4 @@
-# Scrimba-24-days-of-JavaScriptmas
+# Scrimba 24 days of JavaScriptmas
 
 The [JavaScriptmas](https://scrimba.com/learn/adventcalendar) is a twenty-four-day coding course created by [Scrimba](https://scrimba.com/).
 
