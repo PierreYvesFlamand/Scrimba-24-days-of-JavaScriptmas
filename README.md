@@ -10,7 +10,7 @@ n children have got m pieces of candy. They want to eat as much candy as they ca
 
 **Example**
 * For n = 3 and m = 10, the output should be candies(n, m) = 9.
-* Each child will eat 3 pieces. So the answer is 9.
+    * Each child will eat 3 pieces. So the answer is 9.
 
 **Hints**
 * Math.floor()
