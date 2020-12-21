@@ -1092,3 +1092,67 @@ function arrayPreviousLess(nums) {
 
 </p>
 </details>
+
+<details><summary><b>Day 19: Alphabet Subsequence</b></summary>
+<p>
+
+Check whether the given string is a subsequence of the plaintext alphabet.
+
+### Example
+
+-   For s = "effg" or "cdce", the output should be alphabetSubsequence(s) = false
+-   For s = "ace" or "bxz", the output should be alphabetSubsequence(s) = true
+
+### Hints
+
+-   size property
+-   charCodeAt()
+-   split()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function alphabetSubsequence(str) {
+    let result = true;
+    let prevCode = 'a'.charCodeAt(0) - 1;
+    
+    str.split('').forEach(letter => {
+        const letterCode = letter.charCodeAt(0);
+        if(letterCode > prevCode && result){
+            result = true;
+            prevCode = letterCode;
+        } else {
+            result = false;
+        }
+    })
+    
+    return result;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function alphabetSubsequence(str) {
+    const lettersCodes = str.split('').map((letter) => letter.charCodeAt(0));
+
+    if (new Set(lettersCodes).size !== lettersCodes.length) {
+        return false;
+    }
+    return true;
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co0a84de9bc21e79258be5ab4)
+
+---
+
+</p>
+</details>
