@@ -1,0 +1,65 @@
+/*
+Thanks to these fine individuals from Unsplash:
+https://unsplash.com/photos/AmzKuEnr1VY
+https://unsplash.com/photos/eDnJQL21amc
+https://unsplash.com/photos/LXy2DOOxESQ
+https://unsplash.com/photos/KBKHXjhVQVM
+https://unsplash.com/photos/PxM8aeJbzvk
+*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+}
+
+.previous,
+.next {
+    justify-self: center;
+    align-self: center;
+    width: 35px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-disable {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 200px 20%;
+    place-content: center;
+    background-color: rgb(198, 226, 226);
+    height: max-content;
+    padding: 10px 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.459);
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    transform: translateX(0px);
+    transition: transform 0.4s ease;
+}
+
+.card {
+    margin-right: 20px;
+    align-self: center;
+}

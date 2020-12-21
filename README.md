@@ -765,3 +765,156 @@ function arrayMaximalAdjacentDifference(nums) {
 
 </p>
 </details>
+
+<details><summary><b>Day 15: Carousel</b></summary>
+<p>
+
+Create a very simple Html/Css/Js carousel.
+
+### Example
+
+-   [Demo]()
+
+### Hints
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+-   HTML
+
+```html
+<div class="container">
+    <img src="./img/previous.svg" class="previous" alt="previous image" />
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <img class="card" src="./img/presents.jpg" alt="Christmas Presents" />
+            <img class="card" src="./img/cookies.jpg" alt="Christmas Cookies" />
+            <img class="card" src="./img/santa.jpg" alt="Christmas Santa" />
+            <img class="card" src="./img/candycane.jpg" alt="Christmas Candycane" />
+            <img class="card" src="./img/reindeer.jpg" alt="Christmas Reindeer" />
+        </div>
+    </div>
+    <img src="./img/next.svg" class="next" alt="next image" />
+</div>
+```
+
+-   CSS
+
+```css
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 200px;
+}
+
+.previous,
+.next {
+    justify-self: center;
+    align-self: center;
+    width: 35px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-disable {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 200px 20%;
+    place-content: center;
+    background-color: rgb(198, 226, 226);
+    height: max-content;
+    padding: 10px 30px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.459);
+}
+
+.gallery-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.gallery {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    transform: translateX(0px);
+    transition: transform 0.4s ease;
+}
+
+.card {
+    margin-right: 20px;
+    align-self: center;
+}
+```
+
+-   JS
+
+```js
+const nextBtn = document.querySelector('.next');
+const previousBtn = document.querySelector('.previous');
+const maxSlide = Array.from(document.querySelectorAll('.card')).length - 1;
+let currentSlide = 0;
+
+const updateSlide = (e) => {
+    currentSlide += e.target.classList[0] === 'next' ? 1 : -1;
+    document.querySelector('.gallery').style.transform = `translateX(-${currentSlide * 220}px)`;
+    updateBtn(currentSlide);
+};
+
+const updateBtn = (currentSlide) => {
+    switch (currentSlide) {
+        case 0:
+            disableBtn(previousBtn);
+            enableBtn(nextBtn);
+            break;
+
+        case maxSlide:
+            enableBtn(previousBtn);
+            disableBtn(nextBtn);
+            break;
+
+        default:
+            enableBtn(previousBtn);
+            enableBtn(nextBtn);
+    }
+};
+
+const disableBtn = (btn) => {
+    btn.classList.add('btn-disable');
+    btn.removeEventListener('click', updateSlide);
+};
+
+const enableBtn = (btn) => {
+    btn.classList.remove('btn-disable');
+    btn.addEventListener('click', updateSlide);
+};
+
+// Initial call
+updateBtn(currentSlide);
+```
+
+</p>
+</details>
+
+[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%2015%20-%20Carousel)
+
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2015%20-%20Carousel)
+
+[Link to my scrimb](https://scrimba.com/scrim/coe3a4979bf890f8dae8708e5)
+
+---
+
+</p>
+</details>
