@@ -21,6 +21,8 @@ From the 1st of December 2020 to 24th of december, here are my solutions.
 
 [Day 7: Count Vowel Consonant](#day-7-count-vowel-consonant)
 
+[Day 8: The Rolling Dice](#day-8-the-rolling-dice)
+
 </p>
 </details>
 
@@ -62,7 +64,7 @@ function candies(children, candy) {
 </p>
 </details>
 
-<a href="https://scrimba.com/scrim/co6e242088c674c5acde61c54" target="_blank">Link to my scrimb</a>
+[Link to my scrimb](https://scrimba.com/scrim/co6e242088c674c5acde61c54)
 
 ---
 
@@ -376,5 +378,68 @@ function countVowelConsonant(str) {
 </details>
 
 [Link to my scrimb](https://scrimba.com/scrim/co3e5411f93ddf1ce131435df)
+
+---
+
+## Day 8: The Rolling Dice
+
+In this challenge a casino has asked you to make an online dice that works just like it wold in real life. Using the pre-made dice face that represents ‘one’, make the faces for ‘two’, ‘three’, ‘four’, ‘five’ and ‘six’. Now when the users clicks the dice on the screen the dice is expected to show one of the faces randomly.
+
+### Hints
+
+-   event listeners
+-   Math.random()
+
+<details><summary><b>Solutions</b></summary>
+<p>
+    
+```html
+<div class="dice"></div>
+<button class="btn-roll">Roll the dice</button>
+```
+
+```js
+// Create base dice
+for (let i = 0; i < 9; i++) {
+    const div = document.createElement('div');
+    document.querySelector('.dice').appendChild(div);
+}
+const dice = Array.from(document.querySelectorAll('.dice div'));
+
+// Button event
+document.querySelector('.btn-roll').addEventListener('click', () => {
+    const rdmNum = Math.floor(Math.random() * 6) + 1;
+    showNumber(rdmNum);
+});
+
+// Display dot
+const dotPosition = {
+    1: [4],
+    2: [2, 6],
+    3: [2, 4, 6],
+    4: [0, 2, 6, 8],
+    5: [0, 2, 4, 6, 8],
+    6: [0, 2, 3, 5, 6, 8],
+};
+
+function showNumber(num) {
+    // Remove prev display
+    dice.map((dot) => {
+        dot.classList.remove('dot');
+    });
+
+    // Add new display
+    dotPosition[num].forEach((pos) => {
+        dice[pos].classList.add('dot');
+    });
+}
+```
+
+</p>
+</details>
+
+[Source Code]()
+[Demo]()
+[Link to my scrimb](https://scrimba.com/scrim/co153455a86de634e8de97b58)
 
 ---
