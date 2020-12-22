@@ -112,7 +112,7 @@ function depositProfit(deposit, rate, threshold) {
 </p>
 </details>
 
-<details><summary><b>👼 Day 3: Chunky Monkey</b></summary>
+<details><summary><b>🧚‍ Day 3: Chunky Monkey</b></summary>
 <p>
 
 Write a function that splits an array (first argument) into groups the length of size (second argument) and returns them as two-dimensional array.
@@ -1272,8 +1272,49 @@ function sumOfTwo(nums1, nums2, value) {
 </p>
 </details>
 
-<details><summary><b>🔜 Day 22: Soon</b></summary>
+<details><summary><b>👼 Day 22: Extract Matrix Column</b></summary>
 <p>
+
+Given a rectangular matrix and an integer column, return an array containing the elements of the columnth column of the given matrix (the leftmost column is the 0th one).
+
+### Example
+
+-   For matrix [[1, 1, 1, 2], [0, 5, 0, 4], [2, 1, 3, 6]]and column = 2, the output should be extractMatrixColumn(matrix, column) = [1, 0, 3]
+
+### Hints
+
+-   push()
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+```js
+function extractMatrixColumn(matrix, column) {
+    const arr = [];
+    
+    matrix.forEach(matrix => {
+        arr.push(matrix[column]);
+    })
+    
+    return arr;
+}
+```
+</p>
+</details>
+
+<details><summary><b>Compact solution</b></summary>
+<p>
+
+```js
+function extractMatrixColumn(matrix, column) {
+    return matrix.reduce((acc, matrix) => acc.concat(matrix[column]), []);
+}
+```
+
+</p>
+</details>
+
+[Link to my scrimb](https://scrimba.com/scrim/co891405db4e4b5f2721d4638)
 
 ---
 
