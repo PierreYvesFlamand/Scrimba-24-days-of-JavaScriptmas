@@ -1307,7 +1307,7 @@ function extractMatrixColumn(matrix, column) {
 
 ```js
 function extractMatrixColumn(matrix, column) {
-    return matrix.reduce((acc, matrix) => acc.concat(matrix[column]), []);
+    return matrix.reduce((acc, matrix) => [...acc, matrix[column]], [])
 }
 ```
 
