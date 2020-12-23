@@ -775,8 +775,6 @@ Create a very simple Html/Css/Js carousel.
 
 -   [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2015%20-%20Carousel)
 
-### Hints
-
 <details><summary><b>Solution</b></summary>
 <p>
     
@@ -1307,7 +1305,7 @@ function extractMatrixColumn(matrix, column) {
 
 ```js
 function extractMatrixColumn(matrix, column) {
-    return matrix.reduce((acc, matrix) => [...acc, matrix[column]], [])
+    return matrix.reduce((acc, matrix) => [...acc, matrix[column]], []);
 }
 ```
 
@@ -1321,8 +1319,126 @@ function extractMatrixColumn(matrix, column) {
 </p>
 </details>
 
-<details><summary><b>🔜 Day 23: Soon</b></summary>
+<details><summary><b>🌠 Day 23: Social Media Input</b></summary>
 <p>
+
+We are making a Social Media Character Counter! We want to display the available characters LEFT.
+Using the Keydown event should help you here. When the characters reach 20 and below, we want them to turn red. So we will use Javascript to add that styling to it. If the characters drop below 0, we want the button to be disabled BUT if there are only 0 characters left, we should still be able to tweet.
+
+### Example
+
+-   [Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2023%20-%20Social%20Media%20Input)
+
+### Hints
+
+-   keydown
+-   addEventListeners
+-   add and remove a class
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+-   HTML
+
+```html
+<div class="container">
+    <textarea type="text" id="string" placeholder="Type in the box"></textarea>
+    <div id="counterFooter">140/140</div>
+
+    <button id="btn"><h2>Tweet</h2></button>
+</div>
+```
+
+-   CSS
+
+```css
+body {
+    background-color: #023f6a;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+textarea {
+    font-family: inherit;
+    width: 16em;
+    height: 10em;
+    background-color: rgb(21, 32, 43);
+    color: #fff;
+    border-radius: 10px;
+}
+
+textarea::placeholder {
+    color: #fff;
+}
+
+#counterFooter {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    margin: 1em;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+        'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+    width: 16em;
+    background-color: rgb(29, 161, 242);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button h2 {
+    color: #fff;
+}
+
+.buttonDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+```
+
+-   JS
+
+```js
+const textarea = document.querySelector('#string');
+const counter = document.querySelector('#counterFooter');
+const tweetBtn = document.querySelector('#btn');
+
+textarea.addEventListener('input', (e) => {
+    setTimeout(() => {
+        const strL = e.target.value.length;
+        counter.textContent = `${140 - strL}/140`;
+
+        if (strL >= 140 - 20) {
+            counter.style.color = 'red';
+        } else {
+            counter.style.color = 'white';
+        }
+
+        if (strL > 140) {
+            tweetBtn.classList.add('buttonDisabled');
+        } else {
+            tweetBtn.classList.remove('buttonDisabled');
+        }
+    }, 1);
+});
+```
+
+</p>
+</details>
+
+[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%2023%20-%20Social%20Media%20Input)
+
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2023%20-%20Social%20Media%20Input)
+
+[Link to my scrimb](https://scrimba.com/scrim/co5f24defa78f8eecf170194f)
 
 ---
 

@@ -1,0 +1,50 @@
+body {
+    background-color: #023f6a;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+textarea {
+    font-family: inherit;
+    width: 16em;
+    height: 10em;
+    background-color: rgb(21, 32, 43);
+    color: #fff;
+    border-radius: 10px;
+}
+
+textarea::placeholder {
+    color: #fff;
+}
+
+#counterFooter {
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+    margin: 1em;
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+}
+
+button {
+    width: 16em;
+    background-color: rgb(29, 161, 242);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button h2 {
+    color: #fff;
+}
+
+.buttonDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
