@@ -1445,8 +1445,134 @@ textarea.addEventListener('input', (e) => {
 </p>
 </details>
 
-<details><summary><b>🔜 Day 24: Soon</b></summary>
+<details><summary><b>🦞 Day 24: Test Your Agility</b></summary>
 <p>
+
+Make a counter that incrememnts every 75 milliseconds.
+
+### Example
+
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2024%20-%20Test%20Your%20Agility)
+
+<details><summary><b>Solution</b></summary>
+<p>
+    
+-   HTML
+
+```html
+<div class="title">
+    <h1>Test your agility!</h1>
+    <h3>Push the button at the right time to hit the target number (0-100)</h3>
+</div>
+<div class="target">
+    <h3>Target Number:</h3>
+    &nbsp;
+    <h3 id="targetNum"></h3>
+</div>
+<div class="spin">
+    <h3>Spining Wheel:</h3>
+    &nbsp;
+    <h3 id="spinning"></h3>
+</div>
+<button id="buttonPressed">STOP</button>
+<h4 id="result"></h4>
+<button onclick="location.reload()">Replay</button>
+```
+
+-   CSS
+
+```css
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.target,
+.spin {
+    display: flex;
+    justify-content: center;
+}
+
+#result {
+    color: blue;
+    text-align: center;
+}
+
+button {
+    height: 32px;
+    border: 1.5px solid aquamarine;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+-   JS
+
+```js
+let pushed = false; // Has the stop button been pushed - false is default
+let targetInt; // The target number to stop the wheel on
+const spinningElem = document.getElementById('spinning'); // The spinning number
+
+// Event listener
+document.getElementById('buttonPressed').addEventListener('click', buttonPressed);
+
+// When the stop button is pushed
+function buttonPressed() {
+    pushed = true;
+}
+
+// Set the target Int
+function setTargetInt() {
+    const targetElem = document.getElementById('targetNum');
+    targetInt = Math.floor(Math.random() * 101);
+    targetElem.innerHTML = targetInt;
+}
+
+// Sleep const
+const sleep = (milliseconds) => {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+};
+
+// Number spinner
+const spin = async () => {
+    for (let i = 0; i < 101; i++) {
+        if (i === 100) {
+            i = 0;
+        }
+        if (pushed === true) {
+            stop(i);
+            break;
+        } else {
+            spinningElem.innerHTML = i;
+            await sleep(75);
+        }
+    }
+};
+
+function stop(i) {
+    let dif = Math.abs(targetInt - (i - 1));
+
+    document.getElementById('result').innerHTML = dif === 0 ? 'You Win!' : `Oh no, you lose! Off by ${dif}`;
+}
+
+setTargetInt();
+spin();
+```
+
+</p>
+</details>
+
+[Source Code](https://github.com/PierreYvesFlamand/Scrimba-24-days-of-JavaScriptmas/tree/main/Day%2024%20-%20Test%20Your%20Agility)
+
+[Demo](https://pierreyvesflamand.github.io/Scrimba-24-days-of-JavaScriptmas/Day%2024%20-%20Test%20Your%20Agility)
+
+[Link to my scrimb](https://scrimba.com/scrim/cof9c41a7a47fbac44db93f8e)
 
 </p>
 </details>
